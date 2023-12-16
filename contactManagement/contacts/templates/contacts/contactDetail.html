@@ -1,0 +1,79 @@
+<!-- contacts/templates/contacts/contact_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(to bottom, #000, #222); /* Black to dark gray gradient */
+            color: #fff;
+            text-align: left;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.home {
+            background-color: #337ab7; /* Blue button color */
+        }
+
+        a.edit {
+            background-color: #5bc0de; /* Light blue button color */
+        }
+
+        a.delete {
+            background-color: #d9534f; /* Red button color */
+        }
+
+        a:hover {
+            background-color: #555; /* Dark gray button color on hover */
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+            padding: 10px 0;
+            background-color: #222;
+            border-top: 1px solid #444;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Detail</h1>
+    <p><strong>Name:</strong> {{ contact.name }}</p>
+    <p><strong>Email:</strong> {{ contact.email }}</p>
+    <p><strong>Notes:</strong> {{ contact.notes }}</p>
+    <p><strong>Created Time:</strong> {{ contact.created_at }}</p>
+
+    <a class="home" href="{% url 'contactList' %}">Home</a>
+    <a class="edit" href="{% url 'contactEdit' pk=contact.pk %}">Edit</a>
+    <a class="delete" href="{% url 'contactDelete' pk=contact.pk %}">Delete</a>
+  
+    <div class="copyright">
+        &copy; Created by Harshit Kumar Jain.
+    </div>
+</body>
+</html>
