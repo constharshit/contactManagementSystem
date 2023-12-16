@@ -13,7 +13,7 @@
 
 https://drive.google.com/file/d/1KFVRaCUUjxYGSuUMPD3n6o3sBbCs_LXk/view?usp=drive_link
 
-## Implementation Screenshots
+## Implementation Screenshot
 
 ![Alt Text](assets/snipDjango.png)
   
